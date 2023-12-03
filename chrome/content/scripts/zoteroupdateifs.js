@@ -500,7 +500,10 @@ Zotero.UpdateIFs.updateSelectedItem = async function (items) {
                 var detailURL = ifs[2];
                 var jourAbb = ifs[3];
                 var old = item.getField('extra')
-
+                
+                // 保留一位小数
+                var ifCurrent = ifCurrent.toFixed(1);
+                var if5Year = if5Year.toFixed(1);
 
                 var ifc = '影响因子: ';
                 var if5 = '\n5年影响因子: ';
